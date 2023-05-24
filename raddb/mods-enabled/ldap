@@ -1,0 +1,11 @@
+ldap {
+   server = 'mydomain.com'
+   base_dn = 'CN=Users,DC=mydomain,DC=com'
+   identity = 'CN=celal,CN=Users,DC=mydomain,DC=com'
+   password = ' PassWord123'
+
+   user {
+      filter = "(sAMAccountName=%{%{Stripped-User-Name}:-%{User-Name}})"  
+   }
+
+}
